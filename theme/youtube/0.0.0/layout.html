@@ -1,0 +1,34 @@
+<template id="base">
+<div id="wrap">
+	<div id="wrapper">
+		<div id="container">
+{{ body }}
+		</div>
+	</div>
+</div>
+<script src="{{ theme_url }}/{{ theme_id }}/{{ theme_version }}/scripted.js?latest={{ latest }}"></script>
+</template>
+
+<template id="index">
+<div id="app" class="flex flex-row match_parent">
+	<header>
+		<a>Movie's</a>
+		-
+		<a>TV Show's</a>
+	</header>
+	<div id="body" class="flex flex-grow">
+		<!--menu>
+{{ theme menu:list }}
+		</menu-->
+		<main class="flex-grow">
+{{ data }}
+		</main>
+		<!--section>
+			section
+		</section-->
+	</div>
+	<footer>
+		footer
+	</footer>
+</div>
+</template>
