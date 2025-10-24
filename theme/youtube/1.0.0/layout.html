@@ -1,0 +1,35 @@
+<template id="base">
+<div id="wrap">
+	<div id="wrapper">
+		<div id="container">
+{{ body }}
+		</div>
+	</div>
+</div>
+<script src="{{ theme_url }}/{{ theme_id }}/{{ theme_version }}/scripted.js?{{ latest }}"></script>
+</template>
+
+<template id="index">
+<div id="app" class="flex flex-row match_parent">
+	<header style="display: flex; gap: 10px; background: rgb(3, 37, 65);">
+		<div><img src="https://cinemamovie.net/wp-content/uploads/2025/09/logo-cinemamovie.net_-scaled.png" height="50"></div>
+		<div><a>Movie's</a>
+		-
+		<a>TV Show's</a></div>
+	</header>
+	<div id="body" class="flex flex-grow">
+		<!--menu>
+{{ theme menu:list }}
+		</menu-->
+		<main class="flex-grow">
+{{ data }}
+		</main>
+		<!--section>
+			section
+		</section-->
+	</div>
+	<footer>
+		footer
+	</footer>
+</div>
+</template>
