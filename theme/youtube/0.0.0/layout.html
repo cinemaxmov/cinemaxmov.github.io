@@ -12,7 +12,7 @@
 <template id="index">
 <div id="app" class="flex flex-row match_parent">
 	<header class="flex align-item gap">
-		<div class="padding"><img class="header-logo" src="https://cinemamovie.net/wp-content/uploads/2025/09/logo-cinemamovie.net_-scaled.png"></div>
+		<div class="padding"><a href="/"><img class="header-logo" src="https://cinemamovie.net/wp-content/uploads/2025/09/logo-cinemamovie.net_-scaled.png"></a></div>
 		<div class="flex flex-grow align-item gap padding-left">
 			<div class="flex align-item gap:small padding padding-horizontal:large border-radius:round" style="color: white; background-color: rgb(58, 188, 231);">
 				<div class="icon:container font-size:medium"><span class="icon:material">movie</span></div>
@@ -26,19 +26,68 @@
 		<div class="flex align-item gap">
 			<div class="flex align-item gap:small" style="color: white">
 				<div class="icon:container font-size:medium"><span class="icon:material">contact_support</span></div>
-				<a class="bold" style="color: white" href="">FAQ</a>
+				<a class="bold" style="color: white" href="/FAQ">FAQ</a>
 			</div>
 			<div class="flex align-item gap:small" style="color: white">
 				<div class="icon:container font-size:medium"><span class="icon:material">shield_lock</span></div>
-				<a class="bold" style="color: white" href="">DMCA</a>
+				<a class="bold" style="color: white" href="/DMCA">DMCA</a>
 			</div>
 			<div class="flex align-item gap:small" style="color: white">
 				<div class="icon:container font-size:medium"><span class="icon:material">article_person</span></div>
-				<a class="bold" style="color: white" href="">Disclaimer</a>
+				<a class="bold" style="color: white" href="/disclaimer">Disclaimer</a>
 			</div>
 			<div class="flex align-item gap:small" style="color: white">
 				<div class="icon:container font-size:medium"><span class="icon:material">admin_panel_settings</span></div>
-				<a class="bold" style="color: white" href="">Privacy Policy</a>
+				<a class="bold" style="color: white" href="/privacy/policy/">Privacy Policy</a>
+			</div>
+		</div>
+		<div class="padding">
+			<input id="header-search" type="search" class="no-border padding border-radius:round" placeholder="Search ..." style="width: 300px">
+		</div>
+	</header>
+	<div id="body" class="flex flex-grow">
+		<main class="flex justify-item flex-grow padding">
+	{{ data }}
+		</main>
+	</div>
+	<footer class="flex flex-row align-item justify-item padding font-size:small tmdb-background-color" style="color: white">
+		<div class="">Copyright &copy; 2025 By Cinema Movie</div>
+		<div class="">All Right's Reserved</div>
+		<div class="">All Logo's and Trademark's on this site are the property of their respective Owner's</div>
+	</footer>
+</div>
+</template>
+
+<template id="page">
+<div id="app" class="flex flex-row match_parent">
+	<header class="flex align-item gap">
+		<div class="padding"><a href="/"><img class="header-logo" src="https://cinemamovie.net/wp-content/uploads/2025/09/logo-cinemamovie.net_-scaled.png"></a></div>
+		<div class="flex flex-grow align-item gap padding-left">
+			<div class="flex align-item gap:small padding padding-horizontal:large border-radius:round" style="color: white; background-color: rgb(58, 188, 231);">
+				<div class="icon:container font-size:medium"><span class="icon:material">movie</span></div>
+				<a class="bold" style="color: white" href="">Movie's</a>
+			</div>
+			<div class="flex align-item gap:small padding padding-horizontal:large border-radius:round" style="color: white; background-color: rgb(58, 188, 231);">
+				<div class="icon:container font-size:medium"><span class="icon:material">tv_guide</span></div>
+				<a class="bold" style="color: white" href="">TV Show's</a>
+			</div>
+		</div>
+		<div class="flex align-item gap">
+			<div class="flex align-item gap:small" style="color: white">
+				<div class="icon:container font-size:medium"><span class="icon:material">contact_support</span></div>
+				<a class="bold" style="color: white" href="/FAQ">FAQ</a>
+			</div>
+			<div class="flex align-item gap:small" style="color: white">
+				<div class="icon:container font-size:medium"><span class="icon:material">shield_lock</span></div>
+				<a class="bold" style="color: white" href="/DMCA">DMCA</a>
+			</div>
+			<div class="flex align-item gap:small" style="color: white">
+				<div class="icon:container font-size:medium"><span class="icon:material">article_person</span></div>
+				<a class="bold" style="color: white" href="/disclaimer">Disclaimer</a>
+			</div>
+			<div class="flex align-item gap:small" style="color: white">
+				<div class="icon:container font-size:medium"><span class="icon:material">admin_panel_settings</span></div>
+				<a class="bold" style="color: white" href="/privacy/policy/">Privacy Policy</a>
 			</div>
 		</div>
 		<div class="padding">
@@ -50,7 +99,7 @@
 {{ data }}
 		</main>
 	</div>
-	<footer class="flex flex-row align-item justify-item padding font-size:small">
+	<footer class="flex flex-row align-item justify-item padding font-size:small tmdb-background-color" style="color: white">
 		<div class="">Copyright &copy; 2025 By Cinema Movie</div>
 		<div class="">All Right's Reserved</div>
 		<div class="">All Logo's and Trademark's on this site are the property of their respective Owner's</div>
