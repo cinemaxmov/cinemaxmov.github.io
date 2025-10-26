@@ -1,4 +1,4 @@
-<template id="base">
+<template id="vue">
 <div id="wrap">
 	<div id="wrapper">
 		<div id="container">
@@ -16,11 +16,11 @@
 		<div class="flex flex-grow align-item gap padding-left">
 			<div class="flex align-item gap:small padding padding-horizontal:large border-radius:round" style="color: white; background-color: rgb(58, 188, 231);">
 				<div class="icon:container font-size:medium"><span class="icon:material">movie</span></div>
-				<a class="bold" style="color: white" href="">Movie's</a>
+				<a class="bold" style="color: white" href="{{ base_url }}{{ route movie }}">Movie's</a>
 			</div>
 			<div class="flex align-item gap:small padding padding-horizontal:large border-radius:round" style="color: white; background-color: rgb(58, 188, 231);">
 				<div class="icon:container font-size:medium"><span class="icon:material">tv_guide</span></div>
-				<a class="bold" style="color: white" href="">TV Show's</a>
+				<a class="bold" style="color: white" href="{{ base_url }}{{ route tv }}">TV Show's</a>
 			</div>
 		</div>
 		<div class="flex align-item gap">
@@ -46,8 +46,8 @@
 		</div>
 	</header>
 	<div id="body" class="flex flex-grow">
-		<main class="flex justify-item flex-grow padding">
-	{{ data }}
+		<main class="flex flex-row flex-grow">
+{{ theme:location main }}
 		</main>
 	</div>
 	<footer class="flex flex-row align-item justify-item padding font-size:small tmdb-background-color" style="color: white">
@@ -65,7 +65,7 @@
 		<div class="flex flex-grow align-item gap padding-left">
 			<div class="flex align-item gap:small padding padding-horizontal:large border-radius:round" style="color: white; background-color: rgb(58, 188, 231);">
 				<div class="icon:container font-size:medium"><span class="icon:material">movie</span></div>
-				<a class="bold" style="color: white" href="">Movie's</a>
+				<a class="bold" style="color: white" href="{{ route movie }}">Movie's</a>
 			</div>
 			<div class="flex align-item gap:small padding padding-horizontal:large border-radius:round" style="color: white; background-color: rgb(58, 188, 231);">
 				<div class="icon:container font-size:medium"><span class="icon:material">tv_guide</span></div>

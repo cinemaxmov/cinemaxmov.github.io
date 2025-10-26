@@ -3,3 +3,31 @@
 	component (menu:anchor)
 </div>
 </template>
+
+<template id="header:test">
+<div class="test-head" style="background-color: #f1f1f1;">
+	<div class="font-size:big font-weight:bold font:italic">Welcome ... !!!</div>
+	<div class="font-size:large font:italic">Millions of movies, TV shows and people to discover. Explore now.</div>
+</div>
+</template>
+
+<template id="section-title:test">
+<div class="test-section-title-container font-size:medium font-bold:pop">
+	<div class="icon:container font-size:large"><span class="icon:material">{{ icon }}</span></div>
+	<div class="test-section-title">{{ title }}</div>
+</div>
+</template>
+
+<template id="video-card:test container">
+<div class="video-card-test-container scrollbar-x">
+	{{ slot }}
+</div>
+</template>
+
+<template id="video-card:test">
+<div class="video-card-test">
+	<a href="{{ permalink:watch }}" class="video-card-test-thumbnail-container"><img width="180" height="270" src="{{ poster }}"></a>
+	<div class="video-card-test-title">{{ title }}</div>
+	<div class="video-card-test-date">{{ release_date_string }}</div>
+</div>
+</template>
