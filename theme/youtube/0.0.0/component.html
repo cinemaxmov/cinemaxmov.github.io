@@ -26,8 +26,63 @@
 
 <template id="video-card:test">
 <div class="video-card-test">
-	<a href="{{ permalink:watch }}" class="video-card-test-thumbnail-container"><img width="180" height="270" src="{{ poster }}"></a>
+	<a href="{{ permalink }}" class="video-card-test-thumbnail-container"><img width="180" height="270" src="{{ poster }}"></a>
 	<div class="video-card-test-title">{{ title }}</div>
 	<div class="video-card-test-date">{{ release_date_string }}</div>
+</div>
+</template>
+
+<template id="video-view">
+<div class="flex flex-row gap video-view">
+	<div class="video-view-frame padding-horizontal padding-top" style="height: calc(100vh - 75px - 10px);">
+{{ slot:frame }}
+	</div>
+	<style>.element {
+  position: relative; /* Essential for positioning the pseudo-element */
+}
+
+.element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('{{ slot-detail:background }}');
+  background-size: cover; /* Adjust as needed */
+  background-color: rgba(33, 33, 33, 0.99); /* Semi-transparent black overlay */
+  background-blend-mode: multiply; /* Blends the color and image */
+}</style>
+	<div class="flex align-item gap:big padding:big video-view-detail relative">
+		<div class="element index:small"></div>
+		<div class="index:medium border-radius no-overflow" style="min-width: 300px; height: 450px;"><img src="{{ slot-detail:poster }}" class="x v"></div>
+		<div class="flex flex-row flex-grow gap white index:medium">
+			<div class="font-size:big">
+				<b>{{ video:title }}</b> ({{ release:year }})
+			</div>
+			<div class="flex gap">
+				<div>{{ release_date_string }}</div>
+				<div>({{ country }})</div>
+				<div id="video-view-genre">{{ genre }}</div>
+			</div>
+			<br><br><br>
+			<div class="font-size:large font-bold:pop">Overview</div>
+			<div id="video-view-description" class="">{{ description }}</div>
+		</div>
+	</div>
+	<div class="padding">
+		More Info (Coming Soon)
+	</div>
+</div>
+</template>
+
+<template id="video-view:frame">
+<div class="video-view-frame padding" style="height: calc(100vh - 100px);">
+{{ slot }}
+</div>
+</template>
+
+<template id="video-view:detail">
+<div class="video-view-detail">
+{{ slot }}
 </div>
 </template>

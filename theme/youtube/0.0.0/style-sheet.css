@@ -72,6 +72,8 @@ img.header-logo { height: 40px; }
 .font-moirai { font-family: "Moirai One"; }
 .font-cherry-bomb { font-family: "Cherry Bomb One"; }
 
+#video-view-genre a { color: white; }
+
 /**
  * the end
  *
