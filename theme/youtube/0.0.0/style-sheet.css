@@ -8,7 +8,7 @@
  * xxx://xxx.xxx.xxx/xxx
  */
 
-body > #wrap { display: none; width: 100%; height: 100%; } body.computer > #wrap, body.phone > #wrap { display: table; } body#layout > #wrap { display: table; }
+body > #wrap { width: 100%; height: 100%; } body.computer > #wrap, body.phone > #wrap { display: block; } body#layout > #wrap { display: table; }
 body > #wrap > #wrapper { display: table-row; width: 100%; height: 100%; }
 body > #wrap > #wrapper > #container { display: table-cell; width: 100%; height: 100%; background-color: var(--background-color); }
 [print] { display: none; }
@@ -66,6 +66,9 @@ img.header-logo { height: 40px; }
 .test-section-title-container { display: flex; align-items: center; padding: 0 30px; padding-top: 30px; gap: 5px; }
 .test-section-title {  }
 
+.max-width { width: calc(100vw - 16px); }
+.the-cast-container { width: calc(100vw - 385px); }
+
 .scrollbar-x { scrollbar-color: #cccccc #eeeeee; scrollbar-width: thin; }
 
 .font-rubik { font-family: "Rubik Puddles"; }
@@ -73,6 +76,11 @@ img.header-logo { height: 40px; }
 .font-cherry-bomb { font-family: "Cherry Bomb One"; }
 
 #video-view-genre a { color: white; }
+
+.bg-gray { background-color: gray; }
+.bg-red { background-color: red; }
+.bg-green { background-color: green; }
+.bg-blue { background-color: blue; }
 
 /**
  * the end

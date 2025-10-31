@@ -12,7 +12,7 @@
 html, body { font-size: 100%; margin: 0px; padding: 0px; vertical-align: baseline; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
 html, body { width: 100%; height: 100%; } html, body { font-family: var(--font-family); font-size: var(--font-size); color: var(--font-color); background-color: var(--background-color); }
 div, span, form, button, input, select, option { font-family: inherit; font-size: inherit; } span { color: inherit; }
-header, main, menu, nav, section, article, figure, footer { font-family: inherit; font-size: inherit; color: inherit; background-color: inherit; display: block; }
+header, main, menu, nav, section, article, figure, footer { font-family: inherit; font-size: inherit; color: inherit; background-color: inherit; }
 button, select, input, textarea { font-family: inherit; font-size: inherit; color: inherit; outline: none; vertical-align: sub; }
 input::-webkit-inner-spin-button, input::-webkit-outer-spin-button { -webkit-appearance: none; }
 input[type="number"] { -moz-appearance: textfield; }
